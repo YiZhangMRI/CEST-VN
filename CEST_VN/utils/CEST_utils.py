@@ -11,7 +11,7 @@ def source2CEST(x):
     Output:
         torch.Tensor: Real valued CEST data, size [N Z/2-2 H W]
     """
-    num = x.shape[1]/2-2
+    num = x.shape[1]/2-1
     img_CEST = torch.zeros([x.shape[0], int(num), x.shape[2], x.shape[3]], dtype=x.dtype)
 
     for k in range(0, int(num)):
